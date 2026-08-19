@@ -1,14 +1,83 @@
 /**
  * Conteúdo e configuração do Kit Exploradores da Leitura.
- * Os links de checkout ainda não foram fornecidos: enquanto estiverem vazios,
- * os botões levam para a seção de oferta. Basta preencher as URLs reais aqui.
+ *
+ * ==========================================================
+ * CONFIGURAÇÃO DOS CHECKOUTS — cole aqui os links reais
+ * ==========================================================
+ * Enquanto estiverem vazios, os botões não saem da página.
  */
+export const CHECKOUT_10_00 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$10
+export const CHECKOUT_14_90 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$14,90 (oferta especial / upsell)
+export const CHECKOUT_27_90 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$27,90 (kit completo)
+
 export const CHECKOUT = {
-  acessoInicial: "",
-  kitCompleto: "",
+  acessoInicial: CHECKOUT_10_00,
+  kitCompleto: CHECKOUT_27_90,
+  upsell: CHECKOUT_14_90,
 } as const;
 
 export const checkoutHref = (url: string) => (url.length > 0 ? url : "#oferta");
+
+/** Envia o usuário ao checkout (ou mantém na oferta se o link ainda não foi configurado). */
+export const goToCheckout = (url: string) => {
+  if (url.length > 0) {
+    window.location.href = url;
+    return;
+  }
+  document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" });
+};
+
+/** Rastreamento simples: usa dataLayer/gtag se existirem, sem adicionar serviços novos. */
+export const trackEvent = (event: string, params: Record<string, unknown> = {}) => {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  };
+  w.dataLayer?.push({ event, ...params });
+  w.gtag?.("event", event, params);
+};
+
+export const TESTIMONIALS = [
+  {
+    name: "Juliana M.",
+    role: "Mãe da Alice, 5 anos",
+    text: "A Alice pede para fazer as missões todo dia. Em poucas semanas ela já estava juntando as sílabas sozinha.",
+    stars: 5,
+  },
+  {
+    name: "Patrícia S.",
+    role: "Professora de Educação Infantil",
+    text: "Material muito bem organizado. Uso as missões dos primeiros mundos na sala e as crianças adoram o Nino.",
+    stars: 5,
+  },
+  {
+    name: "Rodrigo A.",
+    role: "Pai do Théo, 4 anos",
+    text: "Imprimi em casa e virou nossa atividade da noite. Trocamos o tablet por letras e risadas.",
+    stars: 5,
+  },
+  {
+    name: "Camila F.",
+    role: "Mãe do Bento, 6 anos",
+    text: "O certificado de Superleitor foi a melhor parte: ele guardou como se fosse um troféu.",
+    stars: 5,
+  },
+  {
+    name: "Aline R.",
+    role: "Mãe da Manu, 5 anos",
+    text: "Vale muito o preço. São atividades de verdade, não umas folhinhas soltas.",
+    stars: 5,
+  },
+  {
+    name: "Marcos T.",
+    role: "Pai da Lívia, 6 anos",
+    text: "A leitura de frases era o maior desafio dela. Os mundos finais ajudaram demais.",
+    stars: 5,
+  },
+] as const;
+
 
 export const NAV_LINKS = [
   { label: "O Kit", href: "#o-kit" },
