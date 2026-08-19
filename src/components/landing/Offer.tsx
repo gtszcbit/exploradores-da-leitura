@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { CHECKOUT, checkoutHref } from "@/lib/kit-content";
+import { UpsellDialog } from "./UpsellDialog";
+import { CHECKOUT, goToCheckout, trackEvent } from "@/lib/kit-content";
 import { Check } from "lucide-react";
 
-const basico = ["5 exercícios de alfabetização", "PDF digital", "Pronto para imprimir"];
+const basico = ["5 exercícios de alfabetização", "PDF digital", "Material pronto para imprimir"];
 
 const completo = [
   "100 missões",
@@ -19,6 +21,31 @@ const completo = [
 ];
 
 export function Offer() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+  const [upsellSeen, setUpsellSeen] = useState(false);
+
+  const handleAcessoInicial = () => {
+    trackEvent("clique_oferta_10", { price: 10 });
+    if (upsellSeen) {
+      goToCheckout(CHECKOUT.acessoInicial);
+      return;
+    }
+    setUpsellSeen(true);
+    setUpsellOpen(true);
+    trackEvent("upsell_visualizado", { price: 14.9 });
+  };
+
+  const handleDecline = () => {
+    trackEvent("upsell_recusado", { price: 10 });
+    setUpsellOpen(false);
+    goToCheckout(CHECKOUT.acessoInicial);
+  };
+
+  const handleKitCompleto = () => {
+    trackEvent("clique_kit_completo", { price: 27.9 });
+    goToCheckout(CHECKOUT.kitCompleto);
+  };
+
   return (
     <section id="oferta" className="surface-paper border-y border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -43,8 +70,8 @@ export function Offer() {
                   </li>
                 ))}
               </ul>
-              <Button asChild variant="explore" size="lg" className="mt-8 w-full">
-                <a href={checkoutHref(CHECKOUT.acessoInicial)}>COMEÇAR POR R$ 10,00</a>
+              <Button variant="explore" size="lg" className="mt-8 w-full" onClick={handleAcessoInicial}>
+                COMEÇAR POR R$ 10,00
               </Button>
             </div>
           </Reveal>
@@ -57,8 +84,7 @@ export function Offer() {
               <h3 className="mt-2 font-display text-xl font-semibold tracking-wide text-primary uppercase">
                 Kit completo
               </h3>
-              <p className="mt-4 text-sm font-semibold text-muted-foreground line-through">De R$ 27,90</p>
-              <p className="font-display text-5xl font-bold text-primary">R$ 24,90</p>
+              <p className="mt-4 font-display text-5xl font-bold text-primary">R$ 27,90</p>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {completo.map((i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
@@ -67,8 +93,8 @@ export function Offer() {
                   </li>
                 ))}
               </ul>
-              <Button asChild variant="adventure" size="xl" className="mt-8 w-full">
-                <a href={checkoutHref(CHECKOUT.kitCompleto)}>🚀 QUERO O KIT COMPLETO</a>
+              <Button variant="adventure" size="xl" className="mt-8 w-full" onClick={handleKitCompleto}>
+                <span className="truncate">🚀 QUERO O KIT COMPLETO — R$ 27,90</span>
               </Button>
               <p className="mt-3 text-center text-xs font-semibold text-muted-foreground">
                 Kit digital em PDF • Para crianças de 4 a 6 anos
@@ -77,9 +103,12 @@ export function Offer() {
           </Reveal>
         </div>
       </div>
+
+      <UpsellDialog open={upsellOpen} onOpenChange={setUpsellOpen} onDecline={handleDecline} />
     </section>
   );
 }
+
 
 const security = [
   { emoji: "🔒", title: "Pagamento seguro" },
