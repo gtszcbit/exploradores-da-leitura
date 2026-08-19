@@ -19,7 +19,6 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        showCloseButton
         className="surface-paper max-h-[90dvh] w-[90vw] max-w-lg overflow-x-hidden overflow-y-auto rounded-3xl border-2 border-primary bg-background p-0 shadow-lift sm:w-full"
       >
         <div className="relative px-5 pt-8 pb-6 text-center sm:px-8">
