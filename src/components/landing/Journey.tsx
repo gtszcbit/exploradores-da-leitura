@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
 import nino from "@/assets/nino.png";
-import certificado from "@/assets/certificado.jpg";
+import certificado from "@/assets/pdf-certificado.jpg.asset.json";
 
 const steps = [
   { n: "01", emoji: "🛒", title: "COMPRE", desc: "Escolha o kit e finalize sua compra." },
@@ -128,7 +128,7 @@ export function Achievement() {
         <Reveal>
           <div className="rotate-[-1.5deg] rounded-4xl border-4 border-card bg-card p-3 shadow-lift">
             <img
-              src={certificado}
+              src={certificado.url}
               alt="Certificado de Superleitor(a) do Kit Exploradores da Leitura"
               loading="lazy"
               width={1024}

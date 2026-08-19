@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Reveal } from "./Reveal";
-import capa from "@/assets/hero-mockup.jpg";
-import rimas from "@/assets/pagina-rimas.jpg";
-import silabas from "@/assets/pagina-silabas.jpg";
-import letras from "@/assets/pagina-letras.jpg";
-import frases from "@/assets/pagina-frases.jpg";
-import certificado from "@/assets/certificado.jpg";
+import capa from "@/assets/pdf-capa.jpg.asset.json";
+import sons from "@/assets/pdf-sons.jpg.asset.json";
+import fonemas from "@/assets/pdf-fonemas.jpg.asset.json";
+import silabas from "@/assets/pdf-silabas.jpg.asset.json";
+import palavras from "@/assets/pdf-palavras.jpg.asset.json";
+import historias from "@/assets/pdf-historias.jpg.asset.json";
 
 const pages = [
-  { src: capa, alt: "Capa do Kit Exploradores da Leitura", caption: "Capa do kit" },
-  { src: rimas, alt: "Página de atividade Caça às Rimas", caption: "Caça às Rimas" },
-  { src: silabas, alt: "Página de atividade Bate-Palmas das Sílabas", caption: "Bate-Palmas das Sílabas" },
-  { src: letras, alt: "Página de atividade Caça à Letra", caption: "Caça à Letra" },
-  { src: frases, alt: "Página de atividade Monte a Frase", caption: "Monte a Frase" },
-  { src: certificado, alt: "Certificado de Superleitor", caption: "Certificado de Superleitor(a)" },
+  { src: capa.url, alt: "Capa do Kit Exploradores da Leitura", caption: "Capa do kit" },
+  { src: sons.url, alt: "Página da Floresta dos Sons", caption: "Floresta dos Sons" },
+  { src: fonemas.url, alt: "Página da Caverna dos Fonemas: Junte os Sons", caption: "Caverna dos Fonemas" },
+  { src: silabas.url, alt: "Página do Vale das Sílabas", caption: "Vale das Sílabas" },
+  { src: palavras.url, alt: "Página da Vila das Palavras", caption: "Vila das Palavras" },
+  { src: historias.url, alt: "Página da Torre dos Campeões: O Grande Detetive das Letras", caption: "Torre dos Campeões" },
 ];
 
 export function Gallery() {
@@ -47,7 +47,7 @@ export function Gallery() {
                 loading="lazy"
                 width={912}
                 height={1200}
-                className="aspect-[3/4] w-full rounded-2xl object-cover"
+                className="aspect-[3/4] w-full rounded-2xl object-contain bg-card"
               />
               <span className="mt-3 block px-1 pb-1 font-display text-sm font-semibold text-foreground">
                 {p.caption}
