@@ -7,6 +7,7 @@ import { Missions } from "@/components/landing/Missions";
 import { Gallery } from "@/components/landing/Gallery";
 import { HowItWorks, ForWho, NinoSection, Achievement } from "@/components/landing/Journey";
 import { Offer, Security } from "@/components/landing/Offer";
+import { Testimonials, Guarantee } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta, Footer } from "@/components/landing/Closing";
 import { FAQS } from "@/lib/kit-content";
@@ -70,6 +71,8 @@ function Index() {
         <Achievement />
         <Offer />
         <Security />
+        <Testimonials />
+        <Guarantee />
         <Faq />
         <FinalCta />
       </main>
