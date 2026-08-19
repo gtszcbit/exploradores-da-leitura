@@ -2,11 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { TrustBar, PainDesire, ProductIntro } from "@/components/landing/Story";
-import { Worlds } from "@/components/landing/Worlds";
-import { Missions } from "@/components/landing/Missions";
 import { Gallery } from "@/components/landing/Gallery";
-import { HowItWorks, ForWho, NinoSection, Achievement } from "@/components/landing/Journey";
-import { Offer, Security } from "@/components/landing/Offer";
+import { HowItWorks, ForWho, Achievement } from "@/components/landing/Journey";
+import { Offer } from "@/components/landing/Offer";
 import { Testimonials, Guarantee } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta, Footer } from "@/components/landing/Closing";
@@ -62,17 +60,13 @@ function Index() {
         <TrustBar />
         <PainDesire />
         <ProductIntro />
-        <Worlds />
-        <Missions />
         <Gallery />
         <HowItWorks />
         <ForWho />
-        <NinoSection />
         <Achievement />
         <Offer />
-        <Security />
-        <Testimonials />
         <Guarantee />
+        <Testimonials />
         <Faq />
         <FinalCta />
       </main>
