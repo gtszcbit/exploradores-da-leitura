@@ -29,7 +29,7 @@ export function Hero() {
             de um jeito muito mais divertido.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+          <div className="mt-8 flex flex-col flex-wrap gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
               <a href="#oferta">🚀 QUERO COMEÇAR A AVENTURA</a>
             </Button>
