@@ -28,7 +28,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[92dvh] w-[92vw] max-w-lg overflow-x-hidden overflow-y-auto rounded-[2rem] border-0 bg-card p-0 shadow-lift">
+      <DialogContent className="flex max-h-[92dvh] w-[92vw] max-w-lg flex-col overflow-hidden rounded-[2rem] border-0 bg-card p-0 shadow-lift">
         {/* Cabeçalho decorativo com gradiente */}
         <div className="relative overflow-hidden bg-gradient-to-br from-primary to-primary-soft px-5 py-5 text-center sm:px-8 sm:py-10">
           {/* Círculos decorativos sutis */}
