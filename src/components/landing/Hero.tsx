@@ -34,7 +34,7 @@ export function Hero() {
               <a href="#oferta">🚀 QUERO COMEÇAR A AVENTURA</a>
             </Button>
             <Button asChild variant="explore" size="xl" className="w-full">
-              <a href="#missoes">VER O QUE VEM NO KIT</a>
+              <a href="#galeria">VER O QUE VEM NO KIT</a>
             </Button>
           </div>
 
