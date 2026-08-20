@@ -97,7 +97,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
             className="mt-4 w-full rounded-2xl shadow-card sm:mt-6"
             onClick={accept}
           >
-            <span className="truncate">QUERO O PACOTE COMPLETO POR R$ 14,90</span>
+            <span className="truncate">QUERO O PACOTE COMPLETO</span>
             <ArrowRight className="size-5 shrink-0" aria-hidden />
           </Button>
 
