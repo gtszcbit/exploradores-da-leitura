@@ -54,7 +54,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
         </div>
 
         {/* Corpo centralizado */}
-        <div className="px-5 pt-4 pb-5 text-center sm:px-8 sm:pt-6 sm:pb-8">
+        <div className="overflow-y-auto px-5 pt-4 pb-5 text-center sm:px-8 sm:pt-6 sm:pb-8">
           <p className="font-display text-base font-semibold text-foreground">
             Aproveite o upgrade exclusivo
           </p>
