@@ -6,9 +6,9 @@
  * ==========================================================
  * Enquanto estiverem vazios, os botões não saem da página.
  */
-export const CHECKOUT_10_00 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$10
-export const CHECKOUT_14_90 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$14,90 (oferta especial / upsell)
-export const CHECKOUT_27_90 = ""; // INSIRA_AQUI_O_LINK_DO_CHECKOUT_DE_R$27,90 (kit completo)
+export const CHECKOUT_10_00 = "https://pay.cakto.com.br/3fdj6gx_1051461";
+export const CHECKOUT_14_90 = "https://pay.cakto.com.br/yqa82rh_1050045";
+export const CHECKOUT_27_90 = "https://pay.cakto.com.br/itxbwm9_1051437";
 
 export const CHECKOUT = {
   acessoInicial: CHECKOUT_10_00,
