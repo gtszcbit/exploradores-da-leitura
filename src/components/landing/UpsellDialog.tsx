@@ -48,7 +48,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
             Espere! Antes de continuar...
           </h2>
 
-          <p className="relative mx-auto mt-1.5 max-w-sm text-sm leading-relaxed text-primary-foreground/90 sm:mt-3 sm:text-base">
+          <p className="relative mx-auto mt-1.5 max-w-sm text-sm leading-relaxed text-[#064e3b] sm:mt-3 sm:text-base font-medium">
             Faça upgrade para o Kit Completo por um preço especial, só nesta página.
           </p>
         </div>
@@ -97,7 +97,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
             className="mt-4 w-full rounded-2xl shadow-card sm:mt-6"
             onClick={accept}
           >
-            <span className="truncate">QUERO O PACOTE COMPLETO POR R$ 14,90</span>
+            <span className="truncate">QUERO O PACOTE COMPLETO</span>
             <ArrowRight className="size-5 shrink-0" aria-hidden />
           </Button>
 
