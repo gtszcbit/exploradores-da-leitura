@@ -17,11 +17,14 @@ interface UpsellDialogProps {
 }
 
 const benefits = [
-  "Acesso total às 100 missões educativas",
-  "Todos os 7 mundos de aprendizagem",
-  "Certificado de Superleitor personalizado",
-  "Bônus: Guia prático para pais e educadores",
-  "Acesso vitalício ao material completo",
+  "Tudo do Kit Essencial.",
+  "As 100 Missões completas de alfabetização.",
+  "As 7 fases da jornada da leitura.",
+  "Atividades de sons, letras, sílabas, palavras e frases.",
+  "Jogos educativos e desafios lúdicos.",
+  "Material completo pronto para impressão.",
+  "Certificado de Superleitor(a).",
+  "Acesso imediato e vitalício ao PDF.",
 ];
 
 export function UpsellDialog({ open, onOpenChange, onDecline }: UpsellDialogProps) {
