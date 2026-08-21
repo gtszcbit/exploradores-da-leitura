@@ -52,7 +52,7 @@ export function WhatYouGet() {
                   <div className={`grid size-10 shrink-0 place-items-center rounded-xl sm:size-12 ${item.bg}`}>
                     {item.icon}
                   </div>
-                  <span className="text-sm font-medium leading-tight text-[#123B7A] sm:text-base md:text-lg">
+                  <span className="text-sm font-medium leading-tight text-foreground/90 sm:text-base md:text-lg">
                     {item.text}
                   </span>
                 </li>
