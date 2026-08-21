@@ -1,57 +1,59 @@
 import { Reveal } from "./Reveal";
-import { Check, Star, BookOpen, Dice5, Printer, Award, Trees } from "lucide-react";
+import { Check, Trees, BookOpen, Dice5, Printer, Award } from "lucide-react";
 
 const benefits = [
   {
-    icon: <Check className="size-5" />,
+    icon: Trees,
+    text: "Jornada completa em 7 mundos lúdicos.",
+  },
+  {
+    icon: Check,
     text: "100 missões organizadas por aprendizado.",
   },
   {
-    icon: <Trees className="size-5" />,
-    text: "Jornada completa em 7 mundos.",
+    icon: BookOpen,
+    text: "Do reconhecimento dos sons até a leitura de frases.",
   },
   {
-    icon: <BookOpen className="size-5" />,
-    text: "Do reconhecimento dos sons às frases.",
-  },
-  {
-    icon: <Dice5 className="size-5" />,
+    icon: Dice5,
     text: "Atividades lúdicas e desafios divertidos.",
   },
   {
-    icon: <Printer className="size-5" />,
+    icon: Printer,
     text: "113 páginas em PDF prontas para imprimir.",
   },
   {
-    icon: <Award className="size-5" />,
+    icon: Award,
     text: "Certificado de conclusão personalizado.",
   },
 ];
 
 export function WhatYouGet() {
   return (
-    <section className="bg-background py-12 sm:py-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <Reveal className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+    <section className="bg-[#F8FAFC] py-24 sm:py-32">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="mb-12 text-center">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#122E54] sm:text-4xl">
             O Que Você Vai Receber
           </h2>
-        </Reveal>
+        </div>
 
-        <Reveal delay={100} className="mt-12">
-          <div className="grid gap-4 sm:grid-cols-2 lg:gap-6">
-            {benefits.map((item, index) => (
-              <div key={index} className="flex items-center gap-4 rounded-[24px] bg-card p-6 shadow-soft transition-shadow hover:shadow-card">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-primary">
-                  {item.icon}
+        <div className="overflow-hidden rounded-3xl bg-white shadow-soft">
+          <div className="divide-y divide-slate-100">
+            {benefits.map((b, i) => (
+              <Reveal key={b.text} delay={i * 50}>
+                <div className="flex items-center gap-5 px-6 py-6 sm:px-8">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#E8F9F1]">
+                    <b.icon className="size-5 text-[#065F46]" />
+                  </div>
+                  <span className="text-lg font-medium text-[#334155]">
+                    {b.text}
+                  </span>
                 </div>
-                <span className="text-sm font-medium leading-tight text-foreground/80 sm:text-base">
-                  {item.text}
-                </span>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

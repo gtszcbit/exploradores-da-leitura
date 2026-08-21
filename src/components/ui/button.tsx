@@ -16,12 +16,12 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "rounded-full bg-[#10b981] font-display font-semibold tracking-wide text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#059669] active:translate-y-0",
+        hero: "rounded-full bg-[#86EFAC] font-display font-semibold tracking-wide text-[#122E54] shadow-soft transition-transform hover:-translate-y-0.5 active:translate-y-0",
         adventure:
-          "rounded-full bg-[#10b981] font-display font-semibold tracking-wide text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#059669] active:translate-y-0",
+          "rounded-full bg-[#86EFAC] font-display font-semibold tracking-wide text-[#122E54] shadow-soft transition-transform hover:-translate-y-0.5 active:translate-y-0",
         explore:
-          "rounded-full border-2 border-primary/10 bg-card font-display font-semibold tracking-wide text-primary shadow-soft hover:-translate-y-0.5 hover:bg-muted active:translate-y-0",
-        sky: "rounded-2xl bg-sky font-display font-semibold tracking-wide text-sky-foreground shadow-card hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0",
+          "rounded-full border border-[#122E54]/10 bg-white font-display font-semibold tracking-wide text-[#122E54] shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-slate-50 active:translate-y-0",
+        sky: "rounded-2xl bg-sky font-display font-semibold tracking-wide text-sky-foreground shadow-card transition-transform hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0",
       },
       size: {
         default: "h-9 px-4 py-2",

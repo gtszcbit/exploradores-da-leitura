@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
-import { TrustBar, PainDesire, ProductIntro } from "@/components/landing/Story";
+import { TrustBar } from "@/components/landing/Story";
 import { WhatYouGet } from "@/components/landing/WhatYouGet";
 import { Gallery } from "@/components/landing/Gallery";
-import { HowItWorks, ForWho, Achievement } from "@/components/landing/Journey";
+import { ForWho, Achievement, WorldsSection } from "@/components/landing/Journey";
 import { Offer } from "@/components/landing/Offer";
-import { Testimonials, Guarantee } from "@/components/landing/Testimonials";
+import { Guarantee } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta, Footer } from "@/components/landing/Closing";
 import { FAQS } from "@/lib/kit-content";
@@ -54,23 +54,23 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header removed as requested */}
+    <div className="min-h-screen bg-white selection:bg-[#86EFAC] selection:text-[#122E54]">
+      <Header />
       <main>
         <Hero />
         <TrustBar />
         
-        <WhatYouGet />
-        
-        <Gallery />
-        
-        <ForWho />
-        <Achievement />
-        <Offer />
-        <Guarantee />
-        <Testimonials />
-        <Faq />
-        <FinalCta />
+        <div className="space-y-0">
+          <WhatYouGet />
+          <WorldsSection />
+          <Achievement />
+          <ForWho />
+          <Gallery />
+          <Offer />
+          <Guarantee />
+          <Faq />
+          <FinalCta />
+        </div>
       </main>
       <Footer />
     </div>

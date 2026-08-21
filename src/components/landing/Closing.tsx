@@ -1,39 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
 import nino from "@/assets/nino.png";
-import { CHECKOUT, checkoutHref, NAV_LINKS } from "@/lib/kit-content";
+import { CHECKOUT, checkoutHref } from "@/lib/kit-content";
+import { ShieldCheck, Lock } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-primary py-20 text-primary-foreground">
-      <div className="relative mx-auto grid max-w-5xl items-center gap-12 px-4 text-center sm:px-6 lg:grid-cols-[auto_1fr] lg:text-left">
-        <Reveal>
-          <img
-            src={nino}
-            alt="Nino, o Coelho Detetive"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="mx-auto w-40 animate-float-slow sm:w-56"
-          />
-        </Reveal>
-        <Reveal delay={100}>
-          <h2 className="font-display text-4xl font-bold text-balance sm:text-5xl lg:text-6xl">
-            Pronto para começar?
-          </h2>
-          <p className="mt-6 text-lg opacity-90 sm:text-xl">
-            100 missões esperando pelo próximo explorador.
-          </p>
+    <section className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="overflow-hidden rounded-[40px] bg-[#122E54] px-8 py-16 text-center text-white sm:px-16 sm:py-24">
+          <Reveal>
+            <img
+              src={nino}
+              alt="Nino"
+              loading="lazy"
+              width={200}
+              height={200}
+              className="mx-auto w-32 animate-float-slow sm:w-40"
+            />
+          </Reveal>
+          <Reveal delay={100} className="mt-10">
+            <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Pronto para a aventura?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg text-slate-300 sm:text-xl">
+              A alfabetização do seu pequeno explorador começa aqui.
+            </p>
 
-          <div className="mt-8">
-            <Button asChild variant="adventure" size="xl" className="w-full rounded-full sm:w-auto">
-              <a href={checkoutHref(CHECKOUT.kitCompleto)}>QUERO COMEÇAR AGORA</a>
-            </Button>
-          </div>
-          <p className="mt-6 text-sm font-medium opacity-80 uppercase tracking-widest">
-            R$ 24,90 • ACESSO IMEDIATO
-          </p>
-        </Reveal>
+            <div className="mt-12 flex flex-col items-center gap-6">
+              <Button asChild variant="hero" size="xl" className="w-full px-16 sm:w-auto">
+                <a href={checkoutHref(CHECKOUT.kitCompleto)}>QUERO O KIT COMPLETO AGORA</a>
+              </Button>
+              <div className="flex flex-wrap items-center justify-center gap-8 text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="size-3" />
+                  Garantia de 7 Dias
+                </div>
+                <div className="flex items-center gap-2">
+                  <Lock className="size-3" />
+                  Compra 100% Segura
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -41,39 +51,30 @@ export function FinalCta() {
 
 export function Footer() {
   return (
-    <footer className="bg-background py-20 border-t border-border">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-3">
-        <div>
-          <p className="font-display text-xl font-bold text-primary">Kit Exploradores da Leitura</p>
-          <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
-            Material digital educativo premium para apoio à alfabetização.
-          </p>
+    <footer className="bg-[#F8FAFC] py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+          <div className="text-center lg:text-left">
+            <h3 className="font-display text-xl font-bold text-[#122E54]">
+              Exploradores da Leitura
+            </h3>
+            <p className="mt-2 text-sm text-[#64748B]">
+              Transformando a alfabetização em uma jornada inesquecível.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8 text-xs font-bold tracking-widest text-[#94A3B8] uppercase">
+            <a href="#" className="hover:text-[#122E54] transition-colors">Termos de Uso</a>
+            <a href="#" className="hover:text-[#122E54] transition-colors">Privacidade</a>
+            <a href="#" className="hover:text-[#122E54] transition-colors">Contato</a>
+          </div>
         </div>
 
-        <nav aria-label="Navegação do rodapé">
-          <h3 className="font-display text-sm font-bold tracking-widest text-foreground uppercase">Navegue</h3>
-          <ul className="mt-6 space-y-4 text-base text-muted-foreground">
-            <li><a href="#topo" className="hover:text-primary transition-colors">Início</a></li>
-            <li><a href="#galeria" className="hover:text-primary transition-colors">Por dentro</a></li>
-            <li><a href="#feedbacks" className="hover:text-primary transition-colors">Feedbacks</a></li>
-            <li><a href="#oferta" className="hover:text-primary transition-colors">Planos</a></li>
-          </ul>
-        </nav>
-
-        <nav aria-label="Links legais">
-          <h3 className="font-display text-sm font-bold tracking-widest text-foreground uppercase">Legal</h3>
-          <ul className="mt-6 space-y-4 text-base text-muted-foreground">
-            <li><a href="#" className="hover:text-primary transition-colors">Termos de Uso</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Privacidade</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div className="mx-auto mt-20 max-w-6xl px-4 text-center sm:px-6">
-        <p className="text-xs text-muted-foreground opacity-60">
-          © {new Date().getFullYear()} Kit Exploradores da Leitura. Design Premium.
-        </p>
+        <div className="mt-16 border-t border-slate-200 pt-10 text-center">
+          <p className="text-[10px] font-bold tracking-widest text-[#94A3B8] uppercase">
+            © {new Date().getFullYear()} Kit Exploradores da Leitura. Todos os direitos reservados.
+          </p>
+        </div>
       </div>
     </footer>
   );

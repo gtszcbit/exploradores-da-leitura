@@ -22,47 +22,48 @@ export function Gallery() {
   const active = open === null ? null : pages[open];
 
   return (
-    <section id="galeria" className="py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">Veja por dentro</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+    <section id="galeria" className="bg-[#F8FAFC] py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal className="mb-16 text-center">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#122E54] sm:text-4xl">Veja por dentro</h2>
+          <p className="mt-4 text-lg text-[#64748B]">
             Uma amostra das atividades que fazem parte da aventura.
           </p>
         </Reveal>
-      </div>
 
-      <Reveal>
-        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-8 sm:px-6 lg:mx-auto lg:max-w-6xl lg:grid lg:grid-cols-3 lg:overflow-visible">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {pages.map((p, i) => (
-            <button
-              key={p.caption}
-              type="button"
-              onClick={() => setOpen(i)}
-              className="group w-[85vw] max-w-[320px] shrink-0 snap-center rounded-[24px] border border-border bg-card p-3 text-left shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-card lg:w-auto lg:max-w-none"
-            >
-              <img
-                src={p.src}
-                alt={p.alt}
-                loading="lazy"
-                width={912}
-                height={1200}
-                className="aspect-[3/4] w-full rounded-[18px] object-contain bg-muted/20"
-              />
-              <span className="mt-4 block px-1 pb-1 font-display text-base font-semibold text-primary">
-                {p.caption}
-                <span className="ml-2 text-xs font-medium text-muted-foreground block lg:inline lg:mt-0 mt-1">Clique para ampliar</span>
-              </span>
-            </button>
+            <Reveal key={p.caption} delay={i * 50}>
+              <button
+                type="button"
+                onClick={() => setOpen(i)}
+                className="group w-full overflow-hidden rounded-3xl bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-soft"
+              >
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  width={912}
+                  height={1200}
+                  className="aspect-[3/4] w-full rounded-2xl object-contain bg-slate-50"
+                />
+                <span className="mt-4 flex items-center justify-between px-2 pb-2">
+                  <span className="font-display text-lg font-bold text-[#122E54]">
+                    {p.caption}
+                  </span>
+                  <span className="text-xs font-bold text-[#94A3B8] uppercase tracking-wider">Expandir</span>
+                </span>
+              </button>
+            </Reveal>
           ))}
         </div>
-      </Reveal>
+      </div>
 
       <Dialog open={open !== null} onOpenChange={(v) => !v && setOpen(null)}>
-        <DialogContent className="max-w-[92vw] rounded-3xl p-3 sm:max-w-xl">
+        <DialogContent className="max-w-[92vw] border-none bg-transparent p-0 shadow-none sm:max-w-2xl">
           <DialogTitle className="sr-only">{active?.caption ?? "Página do kit"}</DialogTitle>
           {active && (
-            <img src={active.src} alt={active.alt} className="w-full rounded-2xl" width={912} height={1200} />
+            <img src={active.src} alt={active.alt} className="w-full rounded-3xl shadow-2xl" width={912} height={1200} />
           )}
         </DialogContent>
       </Dialog>
