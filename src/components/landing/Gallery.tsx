@@ -1,38 +1,20 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Reveal } from "./Reveal";
+import capa from "@/assets/pdf-capa.jpg.asset.json";
+import sons from "@/assets/pdf-sons.jpg.asset.json";
+import fonemas from "@/assets/pdf-fonemas.jpg.asset.json";
+import silabas from "@/assets/pdf-silabas.jpg.asset.json";
+import palavras from "@/assets/pdf-palavras.jpg.asset.json";
+import historias from "@/assets/pdf-historias.jpg.asset.json";
 
 const pages = [
-  { 
-    src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Criança realizando atividade de alfabetização", 
-    caption: "Aprendizado na prática" 
-  },
-  { 
-    src: "https://images.unsplash.com/photo-1544377624-d1794bd330ce?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Página de atividades de sons", 
-    caption: "Floresta dos Sons" 
-  },
-  { 
-    src: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Página de fonemas", 
-    caption: "Caverna dos Fonemas" 
-  },
-  { 
-    src: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Página de sílabas", 
-    caption: "Vale das Sílabas" 
-  },
-  { 
-    src: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Página de palavras", 
-    caption: "Vila das Palavras" 
-  },
-  { 
-    src: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=1000&auto=format&fit=crop", 
-    alt: "Certificado de conclusão", 
-    caption: "Torre dos Campeões" 
-  },
+  { src: capa.url, alt: "Capa do Kit Exploradores da Leitura", caption: "Capa do kit" },
+  { src: sons.url, alt: "Página da Floresta dos Sons", caption: "Floresta dos Sons" },
+  { src: fonemas.url, alt: "Página da Caverna dos Fonemas: Junte os Sons", caption: "Caverna dos Fonemas" },
+  { src: silabas.url, alt: "Página do Vale das Sílabas", caption: "Vale das Sílabas" },
+  { src: palavras.url, alt: "Página da Vila das Palavras", caption: "Vila das Palavras" },
+  { src: historias.url, alt: "Página da Torre dos Campeões: O Grande Detetive das Letras", caption: "Torre dos Campeões" },
 ];
 
 export function Gallery() {
@@ -63,7 +45,7 @@ export function Gallery() {
                   loading="lazy"
                   width={912}
                   height={1200}
-                  className="aspect-[3/4] w-full rounded-2xl object-cover bg-slate-50"
+                  className="aspect-[3/4] w-full rounded-2xl object-contain bg-slate-50"
                 />
                 <span className="mt-4 flex items-center justify-between px-2 pb-2">
                   <span className="font-display text-lg font-bold text-[#122E54]">

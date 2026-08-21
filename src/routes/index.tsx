@@ -1,4 +1,3 @@
-/** na hero da página eu quero que você coloque a Redline a foto depois a descrição tudo certinho no geral ela vai ficar na vertical a Hero vai ficar na vertical */
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
