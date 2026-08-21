@@ -63,18 +63,18 @@ export function ForWho() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold text-balance text-primary sm:text-4xl">
-            Feito para transformar momentos de aprendizagem
+            Para todos os pequenos exploradores
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {audiences.map((a, i) => (
             <Reveal key={a.title} delay={i * 100}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition-transform duration-300 hover:-translate-y-1.5">
-                <span className="grid size-14 place-items-center rounded-2xl bg-sky-soft text-3xl" aria-hidden>
+              <div className="h-full rounded-[24px] border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
+                <div className="grid size-14 place-items-center rounded-2xl bg-primary-soft text-3xl" aria-hidden>
                   {a.emoji}
-                </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-foreground">{a.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.desc}</p>
+                </div>
+                <h3 className="mt-6 font-display text-xl font-semibold text-primary">{a.title}</h3>
+                <p className="mt-2 text-base leading-relaxed text-muted-foreground">{a.desc}</p>
               </div>
             </Reveal>
           ))}
