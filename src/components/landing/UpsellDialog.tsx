@@ -28,80 +28,65 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="flex max-h-[95dvh] w-[95vw] max-w-lg flex-col overflow-hidden rounded-[1.5rem] border-0 bg-card p-0 shadow-lift sm:w-[92vw] sm:rounded-[2rem]">
-        {/* Cabeçalho decorativo com gradiente */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary to-primary-soft px-5 py-3 text-center sm:px-8 sm:py-6">
-          {/* Círculos decorativos sutis */}
-          <div className="absolute top-0 right-0 size-20 -translate-y-1/2 translate-x-1/2 rounded-full bg-accent/20 sm:size-32" />
-          <div className="absolute bottom-0 left-0 size-12 -translate-x-1/3 translate-y-1/3 rounded-full bg-white/15 sm:size-24" />
-
-          <span className="relative inline-flex items-center gap-1 rounded-full bg-accent px-2.5 py-1 font-display text-[9px] font-bold tracking-wider text-accent-foreground uppercase shadow-sm sm:px-3 sm:py-1.5 sm:text-[10px]">
-            <Sparkles className="size-2.5 sm:size-3" aria-hidden />
+      <DialogContent className="flex max-h-[95dvh] w-[95vw] max-w-lg flex-col overflow-hidden rounded-[24px] border-0 bg-card p-0 shadow-lift sm:w-[92vw]">
+        <div className="relative overflow-hidden bg-primary px-5 py-6 text-center sm:px-8 sm:py-8">
+          <span className="relative inline-flex items-center gap-1 rounded-full bg-accent px-3 py-1 font-display text-[10px] font-bold tracking-wider text-accent-foreground uppercase shadow-sm">
+            <Sparkles className="size-3" aria-hidden />
             OFERTA POR TEMPO LIMITADO
           </span>
 
-          <h2 className="relative mt-2 font-display text-lg leading-tight font-bold text-white sm:mt-3 sm:text-2xl">
+          <h2 className="relative mt-4 font-display text-2xl leading-tight font-bold text-white sm:text-3xl">
             Espere! Antes de continuar...
           </h2>
 
-          <p className="relative mx-auto mt-1 max-w-sm text-xs leading-relaxed text-[#064e3b] sm:mt-2 sm:text-base font-medium">
+          <p className="relative mx-auto mt-2 max-w-sm text-sm leading-relaxed text-white/90 sm:text-base font-medium">
             Faça upgrade para o Kit Completo por um preço especial, só nesta página.
           </p>
         </div>
 
-        {/* Corpo centralizado */}
-        <div className="overflow-y-auto px-5 pt-3 pb-4 text-center sm:px-8 sm:pt-4 sm:pb-6">
-          <p className="text-xs font-semibold text-muted-foreground sm:text-sm">
-            O Kit Completo inclui tudo isso:
-          </p>
-
-          <div className="mt-2 rounded-xl border border-primary/10 bg-primary-soft/60 p-2 text-left sm:mt-4 sm:rounded-2xl sm:p-4">
-            <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-2">
+        <div className="overflow-y-auto px-6 py-8 text-center sm:px-10">
+          <div className="rounded-[20px] border border-border bg-muted/30 p-5 text-left">
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {completo.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-[11px] text-foreground/90 sm:text-xs">
-                  <span className="mt-0.5 grid size-3.5 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground">
-                    <Check className="size-2" aria-hidden strokeWidth={4} />
-                  </span>
+                <li key={item} className="flex items-start gap-2 text-xs text-foreground/80 font-medium">
+                  <Check className="mt-0.5 size-3.5 shrink-0 text-[#10b981]" aria-hidden strokeWidth={3} />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Preço centralizado e destacado */}
-          <div className="mt-3 flex flex-col items-center justify-center sm:mt-4">
-            <span className="text-[10px] font-semibold text-muted-foreground line-through sm:text-xs">
+          <div className="mt-8 flex flex-col items-center justify-center">
+            <span className="text-xs font-semibold text-muted-foreground line-through">
               de R$ 27,90
             </span>
-            <div className="flex items-baseline gap-1">
-              <span className="text-xs font-semibold text-primary sm:text-sm">por</span>
-              <span className="font-display text-2xl font-bold text-primary sm:text-4xl">
+            <div className="mt-1 flex items-baseline gap-1">
+              <span className="text-sm font-semibold text-primary">por</span>
+              <span className="font-display text-4xl font-bold text-primary sm:text-5xl">
                 R$ 14,90
               </span>
             </div>
-            <span className="mt-0.5 inline-flex items-center rounded-full bg-accent/20 px-2 py-0.5 text-[9px] font-bold text-accent-foreground sm:text-xs">
-              ECONOMIA DE R$ 13,00
-            </span>
           </div>
 
           <Button
             variant="hero"
-            size="lg"
-            className="mt-3 w-full rounded-xl shadow-card sm:mt-4 sm:rounded-2xl"
+            size="xl"
+            className="mt-8 w-full rounded-full shadow-soft"
             onClick={accept}
           >
-            <span className="truncate">QUERO O PACOTE COMPLETO</span>
-            <ArrowRight className="size-4 shrink-0 sm:size-5" aria-hidden />
+            <span>QUERO O PACOTE COMPLETO</span>
+            <ArrowRight className="size-5 shrink-0" aria-hidden />
           </Button>
 
           <button
             type="button"
             onClick={onDecline}
-            className="mx-auto mt-2.5 block text-center text-[10px] font-semibold text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground sm:mt-3 sm:text-xs"
+            className="mx-auto mt-6 block text-center text-xs font-semibold text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
           >
             Não, quero apenas o Acesso Inicial
           </button>
         </div>
+      </DialogContent>
       </DialogContent>
     </Dialog>
   );
