@@ -59,9 +59,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --shadow-soft: 0 10px 30px -12px oklch(0.42 0.09 155 / 0.28);
-  --shadow-card: 0 18px 44px -20px oklch(0.42 0.09 155 / 0.35);
-  --shadow-lift: 0 26px 60px -24px oklch(0.42 0.09 155 / 0.45);
+  --shadow-soft: 0 4px 20px -5px oklch(0 0 0 / 0.05);
+  --shadow-card: 0 8px 30px -10px oklch(0 0 0 / 0.08);
+  --shadow-lift: 0 12px 40px -12px oklch(0 0 0 / 0.1);
 
   --animate-float-slow: float-slow 6s ease-in-out infinite;
   --animate-twinkle: twinkle 3.5s ease-in-out infinite;
@@ -69,60 +69,57 @@
 }
 
 :root {
-  --radius: 1.25rem;
+  --radius: 1.5rem;
 
-  /* Creme / fundo #FFF9EF */
-  --background: oklch(0.985 0.018 91);
-  --foreground: oklch(0.29 0.018 240); /* #263238 */
-  --cream: oklch(0.985 0.018 91);
+  /* Fundo cinza muito claro #F7F8FC */
+  --background: oklch(0.978 0.005 250); /* #F7F8FC */
+  --foreground: oklch(0.25 0.04 250); /* Azul bem escuro para texto */
+  --cream: oklch(0.978 0.005 250);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.29 0.018 240);
+  --card-foreground: oklch(0.25 0.04 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.29 0.018 240);
+  --popover-foreground: oklch(0.25 0.04 250);
 
-  /* Verde Floresta #2F6B4F */
-  --primary: oklch(0.487 0.078 158);
-  --primary-foreground: oklch(0.99 0.012 91);
-  /* Verde Claro #DDF3E5 */
-  --primary-soft: oklch(0.949 0.033 155);
+  /* Azul Escuro (Principal) */
+  --primary: oklch(0.35 0.08 250); /* Azul escuro elegante */
+  --primary-foreground: oklch(0.99 0.01 250);
+  --primary-soft: oklch(0.92 0.02 250);
 
-  --secondary: oklch(0.949 0.033 155);
-  --secondary-foreground: oklch(0.4 0.07 158);
+  --secondary: oklch(0.94 0.03 155);
+  --secondary-foreground: oklch(0.35 0.08 250);
 
-  --muted: oklch(0.965 0.016 91);
-  --muted-foreground: oklch(0.51 0.017 236); /* #607078 */
+  --muted: oklch(0.95 0.01 250);
+  --muted-foreground: oklch(0.55 0.02 250); /* Cinza para subtítulos */
 
-  /* Amarelo Aventura #FFD166 */
-  --accent: oklch(0.867 0.135 87);
-  --accent-foreground: oklch(0.32 0.05 90);
-  /* Amarelo Claro #FFF3C4 */
-  --accent-soft: oklch(0.968 0.061 100);
+  /* Verde e Amarelo Pastel para detalhes */
+  --accent: oklch(0.92 0.07 100); /* Amarelo pastel */
+  --accent-foreground: oklch(0.35 0.08 250);
+  --accent-soft: oklch(0.96 0.04 100);
 
-  /* Azul Céu #5DA9E9 / #EAF5FF */
-  --sky: oklch(0.712 0.116 245);
-  --sky-soft: oklch(0.966 0.017 240);
-  --sky-foreground: oklch(0.32 0.06 245);
+  /* Azul Céu suave */
+  --sky: oklch(0.92 0.05 230);
+  --sky-soft: oklch(0.96 0.02 230);
+  --sky-foreground: oklch(0.35 0.08 250);
 
-  /* Laranja Descoberta #F4A261 */
-  --tangerine: oklch(0.766 0.114 60);
+  --tangerine: oklch(0.85 0.1 60);
   --tangerine-foreground: oklch(0.33 0.06 55);
 
   --destructive: oklch(0.6 0.19 26);
   --destructive-foreground: oklch(0.99 0.01 91);
 
-  --border: oklch(0.912 0.022 120);
-  --input: oklch(0.912 0.022 120);
-  --ring: oklch(0.487 0.078 158);
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.35 0.08 250);
 
-  --sidebar: oklch(0.985 0.018 91);
-  --sidebar-foreground: oklch(0.29 0.018 240);
-  --sidebar-primary: oklch(0.487 0.078 158);
-  --sidebar-primary-foreground: oklch(0.99 0.012 91);
-  --sidebar-accent: oklch(0.949 0.033 155);
-  --sidebar-accent-foreground: oklch(0.4 0.07 158);
-  --sidebar-border: oklch(0.912 0.022 120);
-  --sidebar-ring: oklch(0.487 0.078 158);
+  --sidebar: oklch(0.978 0.005 250);
+  --sidebar-foreground: oklch(0.25 0.04 250);
+  --sidebar-primary: oklch(0.35 0.08 250);
+  --sidebar-primary-foreground: oklch(0.99 0.01 250);
+  --sidebar-accent: oklch(0.94 0.03 155);
+  --sidebar-accent-foreground: oklch(0.35 0.08 250);
+  --sidebar-border: oklch(0.92 0.01 250);
+  --sidebar-ring: oklch(0.35 0.08 250);
 }
 
 .dark {
