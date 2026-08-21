@@ -37,27 +37,6 @@ export function Header() {
         </div>
       </div>
 
-      {open && (
-        <div className="border-t border-border bg-card px-4 pb-5 lg:hidden">
-          <nav className="flex flex-col py-2">
-            {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-2 py-3 font-display text-base font-medium text-foreground hover:bg-secondary"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-          <Button asChild variant="hero" className="w-full">
-            <a href="#oferta" onClick={() => setOpen(false)}>
-              QUERO O KIT
-            </a>
-          </Button>
-        </div>
-      )}
     </header>
   );
 }

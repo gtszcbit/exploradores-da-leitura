@@ -16,53 +16,56 @@ const newBullets = [
 
 export function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden bg-background py-16 sm:py-24 lg:py-32">
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2">
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <span className="reveal-in inline-flex items-center gap-2 rounded-full bg-primary-soft px-4 py-2 font-display text-xs font-semibold tracking-wide text-primary uppercase">
-            📚 Kit educativo • Premium
-          </span>
-
-          <h1 className="reveal-in mt-6 font-display text-4xl leading-[1.1] font-bold text-balance text-primary sm:text-6xl lg:text-7xl">
-            Transforme a alfabetização em uma aventura!
-          </h1>
-
-          <p className="reveal-in mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl lg:mx-0">
-            Uma jornada lúdica com atividades que despertam o interesse da criança
-            pelos sons, letras e palavras de forma natural.
-          </p>
-
-          <div className="mt-10 flex w-full max-w-md flex-col gap-4 lg:max-w-sm">
-            <Button asChild variant="hero" size="xl" className="w-full">
-              <a href="#oferta">QUERO COMEÇAR</a>
-            </Button>
-            <Button asChild variant="explore" size="xl" className="w-full">
-              <a href="#galeria">VER POR DENTRO</a>
-            </Button>
+    <section id="topo" className="relative overflow-hidden bg-white pb-16 pt-24 sm:pb-24 lg:pb-32 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Mobile Image First */}
+          <div className="reveal-in order-1 lg:order-2">
+            <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
+              <div className="relative rounded-3xl bg-white p-6 shadow-soft transition-transform hover:-rotate-1 lg:rotate-2">
+                <img
+                  src={capa.url}
+                  width={703}
+                  height={970}
+                  alt="Mockup Kit Exploradores da Leitura"
+                  className="w-full rounded-2xl shadow-sm lg:shadow-md"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
           </div>
 
-          <ul className="mt-10 flex flex-col items-center gap-3 lg:items-start">
-            {newBullets.map((b) => (
-              <li key={b.text} className="flex items-center gap-3 text-sm font-medium text-muted-foreground sm:text-base">
-                <div className="flex size-5 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                  <b.icon className="size-3" aria-hidden />
-                </div>
-                {b.text}
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div className="reveal-in order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left">
+            <span className="inline-flex items-center rounded-full bg-[#E8F9F1] px-4 py-1.5 text-xs font-bold tracking-wider text-[#065F46] uppercase">
+              PDF Digital • 4 a 6 anos
+            </span>
 
-        <div className="reveal-in relative mx-auto w-full max-w-md [animation-delay:150ms] lg:max-w-none">
-          <div className="relative rounded-[32px] bg-card p-4 shadow-card">
-            <img
-              src={capa.url}
-              width={703}
-              height={970}
-              alt="Capa do Kit Exploradores da Leitura"
-              className="w-full rounded-[24px] object-contain"
-              fetchPriority="high"
-            />
+            <h1 className="mt-8 font-display text-4xl leading-[1.1] font-bold tracking-tight text-[#122E54] sm:text-6xl lg:text-7xl">
+              Transforme a alfabetização em uma aventura!
+            </h1>
+
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#475569] sm:text-xl">
+              Uma jornada lúdica com atividades que despertam o interesse da criança
+              pelos sons e letras.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start">
+              {newBullets.map((b) => (
+                <div key={b.text} className="flex items-center gap-2 text-sm font-semibold text-[#64748B]">
+                  <div className="size-1.5 rounded-full bg-[#86EFAC]" />
+                  {b.text.replace('.', '')}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 w-full max-w-sm lg:max-w-md">
+              <Button asChild variant="hero" size="xl" className="w-full px-12">
+                <a href="#oferta">QUERO COMEÇAR</a>
+              </Button>
+              <p className="mt-4 text-center text-xs font-semibold tracking-wide text-[#94A3B8] uppercase lg:text-left">
+                Acesso imediato • Garantia de 7 dias
+              </p>
+            </div>
           </div>
         </div>
       </div>

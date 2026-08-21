@@ -54,21 +54,17 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header removed as requested */}
+    <div className="min-h-screen bg-white selection:bg-[#86EFAC] selection:text-[#122E54]">
+      <Header />
       <main>
         <Hero />
         <TrustBar />
-        
         <WhatYouGet />
-        
-        <Gallery />
-        
-        <ForWho />
         <Achievement />
+        <ForWho />
+        <Gallery />
         <Offer />
         <Guarantee />
-        <Testimonials />
         <Faq />
         <FinalCta />
       </main>
