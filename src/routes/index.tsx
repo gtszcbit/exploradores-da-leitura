@@ -4,7 +4,7 @@ import { Hero } from "@/components/landing/Hero";
 import { TrustBar, PainDesire, ProductIntro } from "@/components/landing/Story";
 import { WhatYouGet } from "@/components/landing/WhatYouGet";
 import { Gallery } from "@/components/landing/Gallery";
-import { HowItWorks, ForWho, Achievement } from "@/components/landing/Journey";
+import { ForWho, Achievement, WorldsSection } from "@/components/landing/Journey";
 import { Offer } from "@/components/landing/Offer";
 import { Testimonials, Guarantee } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
