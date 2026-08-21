@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import capa from "@/assets/pdf-capa.jpg.asset.json";
 import { Check } from "lucide-react";
 
-const bullets = ["100 missões", "Para crianças de 4 a 6 anos", "PDF pronto para imprimir"];
+const bullets = ["Acesso imediato", "Compra segura", "Garantia de 7 dias"];
 
 export function Hero() {
   return (
