@@ -9,8 +9,6 @@ import historias from "@/assets/chatgpt-image-torre.png.asset.json";
 
 const pages = [
   { src: capa.url, alt: "Capa do Kit Exploradores da Leitura", caption: "Capa do kit" },
-  { src: sons.url, alt: "Página da Floresta dos Sons", caption: "Floresta dos Sons" },
-  { src: fonemas.url, alt: "Página da Caverna dos Fonemas: Junte os Sons", caption: "Caverna dos Fonemas" },
   { src: silabas.url, alt: "Página do Vale das Sílabas", caption: "Vale das Sílabas" },
   { src: historias.url, alt: "Página da Torre dos Campeões: O Grande Detetive das Letras", caption: "Torre dos Campeões" },
 ];
