@@ -35,7 +35,7 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: UpsellDialogProp
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[520px] overflow-hidden rounded-[24px] border-none bg-white p-0 shadow-2xl backdrop-blur-sm">
+      <DialogContent className="max-w-[520px] overflow-hidden rounded-[24px] border-none bg-white p-0 shadow-2xl">
         <div className="relative bg-white px-8 pt-10 pb-6 text-center">
           <div className="absolute top-4 right-4">
             <button 
