@@ -36,10 +36,10 @@ const benefits = [
 
 export function WhatYouGet() {
   return (
-    <section className="bg-[#F5F7FA] py-16 sm:py-24">
+    <section className="bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <Reveal className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-[#123B7A] sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
             O Que Você Vai Receber
           </h2>
         </Reveal>
