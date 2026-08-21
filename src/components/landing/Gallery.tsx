@@ -63,7 +63,7 @@ export function Gallery() {
                   loading="lazy"
                   width={912}
                   height={1200}
-                  className="aspect-[3/4] w-full rounded-2xl object-contain bg-slate-50"
+                  className="aspect-[3/4] w-full rounded-2xl object-cover bg-slate-50"
                 />
                 <span className="mt-4 flex items-center justify-between px-2 pb-2">
                   <span className="font-display text-lg font-bold text-[#122E54]">
