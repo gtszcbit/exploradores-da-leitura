@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import capa from "@/assets/pdf-capa.jpg.asset.json";
-import { Check } from "lucide-react";
+import { Zap, Lock, ShieldCheck } from "lucide-react";
 
-const bullets = ["Acesso imediato", "Compra segura", "Garantia de 7 dias"];
+const bullets = [
+  { text: "Acesso imediato", icon: Zap },
+  { text: "Compra segura", icon: Lock },
+  { text: "Garantia de 7 dias", icon: ShieldCheck },
+];
 
 export function Hero() {
   return (
