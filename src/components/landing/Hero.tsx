@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import capa from "@/assets/pdf-capa.jpg.asset.json";
+import videoAsset from "@/assets/criativo_3.mp4.asset.json";
 import { Zap, Lock, ShieldCheck } from "lucide-react";
 
 const bullets = [
@@ -29,16 +30,18 @@ export function Hero() {
             </h1>
           </div>
 
-          <div className="reveal-in mt-12 w-full max-w-lg">
-            <div className="relative rounded-3xl bg-white p-6 shadow-soft transition-transform hover:scale-[1.02]">
-              <img
-                src={capa.url}
-                width={703}
-                height={970}
-                alt="Mockup Kit Exploradores da Leitura"
-                className="w-full rounded-2xl shadow-sm lg:shadow-md"
-                fetchPriority="high"
-              />
+          <div className="reveal-in mt-12 w-full max-w-2xl">
+            <div className="relative overflow-hidden rounded-3xl bg-slate-100 shadow-soft transition-transform hover:scale-[1.01]">
+              <video 
+                src={videoAsset.url} 
+                className="aspect-video w-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                poster={capa.url}
+              >
+                Seu navegador não suporta vídeos.
+              </video>
             </div>
           </div>
 

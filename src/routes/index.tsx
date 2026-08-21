@@ -6,7 +6,7 @@ import { WhatYouGet } from "@/components/landing/WhatYouGet";
 import { Gallery } from "@/components/landing/Gallery";
 import { ForWho, Achievement, WorldsSection } from "@/components/landing/Journey";
 import { Offer } from "@/components/landing/Offer";
-import { Guarantee } from "@/components/landing/Testimonials";
+import { Testimonials, Guarantee } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta, Footer } from "@/components/landing/Closing";
 import { FAQS } from "@/lib/kit-content";
@@ -66,6 +66,7 @@ function Index() {
           <ForWho />
           <Gallery />
           <Offer />
+          <Testimonials />
           <Guarantee />
           <Faq />
           <FinalCta />
