@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Reveal } from "./Reveal";
-import capa from "@/assets/pdf-capa.jpg.asset.json";
+import capa from "@/assets/kit_cover_v2.jpeg.asset.json";
 import sons from "@/assets/floresta-dos-sons.png.asset.json";
 import fonemas from "@/assets/chatgpt-image-fonemas.png.asset.json";
 import silabas from "@/assets/chatgpt-image-silabas.png.asset.json";
