@@ -21,15 +21,9 @@ const completo = [
 
 export function Offer() {
   const [upsellOpen, setUpsellOpen] = useState(false);
-  const [upsellSeen, setUpsellSeen] = useState(false);
 
   const handleAcessoInicial = () => {
     trackEvent("clique_oferta_10", { price: 10 });
-    if (upsellSeen) {
-      goToCheckout(CHECKOUT.acessoInicial);
-      return;
-    }
-    setUpsellSeen(true);
     setUpsellOpen(true);
   };
 
