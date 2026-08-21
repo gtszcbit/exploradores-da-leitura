@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* Header removed as requested */}
       <main>
         <Hero />
         <TrustBar />

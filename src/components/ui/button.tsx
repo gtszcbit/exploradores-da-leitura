@@ -16,11 +16,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "rounded-2xl bg-primary font-display font-semibold tracking-wide text-primary-foreground shadow-card hover:-translate-y-0.5 hover:bg-primary/92 active:translate-y-0",
+        hero: "rounded-full bg-[#10b981] font-display font-semibold tracking-wide text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#059669] active:translate-y-0",
         adventure:
-          "rounded-2xl bg-accent font-display font-semibold tracking-wide text-accent-foreground shadow-card hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0",
+          "rounded-full bg-[#10b981] font-display font-semibold tracking-wide text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#059669] active:translate-y-0",
         explore:
-          "rounded-2xl border-2 border-primary/25 bg-card font-display font-semibold tracking-wide text-primary shadow-soft hover:-translate-y-0.5 hover:border-primary/50 active:translate-y-0",
+          "rounded-full border-2 border-primary/10 bg-card font-display font-semibold tracking-wide text-primary shadow-soft hover:-translate-y-0.5 hover:bg-muted active:translate-y-0",
         sky: "rounded-2xl bg-sky font-display font-semibold tracking-wide text-sky-foreground shadow-card hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0",
       },
       size: {

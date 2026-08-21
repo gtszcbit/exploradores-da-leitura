@@ -22,24 +22,24 @@ export function Gallery() {
   const active = open === null ? null : pages[open];
 
   return (
-    <section id="galeria" className="py-16 sm:py-20">
+    <section id="galeria" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">Veja por dentro</h2>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Uma pequena amostra das atividades que fazem parte da aventura.
+          <p className="mt-4 text-lg text-muted-foreground">
+            Uma amostra das atividades que fazem parte da aventura.
           </p>
         </Reveal>
       </div>
 
       <Reveal>
-        <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:grid lg:grid-cols-3 lg:overflow-visible">
+        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-8 sm:px-6 lg:mx-auto lg:max-w-6xl lg:grid lg:grid-cols-3 lg:overflow-visible">
           {pages.map((p, i) => (
             <button
               key={p.caption}
               type="button"
               onClick={() => setOpen(i)}
-              className="group w-[78vw] max-w-[320px] shrink-0 snap-center rounded-3xl border border-border bg-card p-3 text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card lg:w-auto lg:max-w-none"
+              className="group w-[85vw] max-w-[320px] shrink-0 snap-center rounded-[24px] border border-border bg-card p-3 text-left shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-card lg:w-auto lg:max-w-none"
             >
               <img
                 src={p.src}
@@ -47,11 +47,11 @@ export function Gallery() {
                 loading="lazy"
                 width={912}
                 height={1200}
-                className="aspect-[3/4] w-full rounded-2xl object-contain bg-card"
+                className="aspect-[3/4] w-full rounded-[18px] object-contain bg-muted/20"
               />
-              <span className="mt-3 block px-1 pb-1 font-display text-sm font-semibold text-foreground">
+              <span className="mt-4 block px-1 pb-1 font-display text-base font-semibold text-primary">
                 {p.caption}
-                <span className="ml-2 text-xs font-semibold text-muted-foreground">toque para ampliar</span>
+                <span className="ml-2 text-xs font-medium text-muted-foreground block lg:inline lg:mt-0 mt-1">Clique para ampliar</span>
               </span>
             </button>
           ))}

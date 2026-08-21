@@ -12,18 +12,20 @@ const trust = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-border bg-card">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 py-6 sm:px-6 lg:grid-cols-4 lg:gap-6">
-        {trust.map((t) => (
-          <div key={t.label} className="flex min-w-0 items-center gap-3">
-            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-secondary text-lg" aria-hidden>
-              {t.emoji}
-            </span>
-            <span className="min-w-0 font-display text-xs leading-tight font-semibold tracking-wide text-foreground/80 uppercase sm:text-sm">
-              {t.label}
-            </span>
-          </div>
-        ))}
+    <section className="bg-background py-10 border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-40 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0">
+          {trust.map((t) => (
+            <div key={t.label} className="flex items-center gap-3">
+              <span className="grid size-8 place-items-center rounded-xl bg-primary-soft text-base" aria-hidden>
+                {t.emoji}
+              </span>
+              <span className="font-display text-xs font-bold tracking-[0.15em] text-primary uppercase">
+                {t.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
