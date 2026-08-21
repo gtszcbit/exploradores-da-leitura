@@ -62,7 +62,7 @@ function Index() {
         
         <div className="space-y-0">
           <WhatYouGet />
-          <Achievement />
+          
           <ForWho />
           <Gallery />
           <Offer />
