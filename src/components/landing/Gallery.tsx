@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import capa from "@/assets/pdf-capa.jpg.asset.json";
 import sons from "@/assets/pdf-sons.jpg.asset.json";
 import fonemas from "@/assets/pdf-fonemas.jpg.asset.json";
-import silabas from "@/assets/pdf-silabas.jpg.asset.json";
+import silabas from "@/assets/chatgpt-image-silabas.png.asset.json";
 import palavras from "@/assets/pdf-palavras.jpg.asset.json";
 import historias from "@/assets/pdf-historias.jpg.asset.json";
 
