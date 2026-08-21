@@ -25,7 +25,7 @@ export function Offer() {
 
   const handleAcessoInicial = () => {
     trackEvent("clique_oferta_10", { price: 10 });
-    if (upsellSeen) {
+    if (false) { // Removida a trava de visualização única para permitir ver o upsell novamente
       goToCheckout(CHECKOUT.acessoInicial);
       return;
     }
