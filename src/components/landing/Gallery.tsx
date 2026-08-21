@@ -6,7 +6,7 @@ import sons from "@/assets/pdf-sons.jpg.asset.json";
 import fonemas from "@/assets/pdf-fonemas.jpg.asset.json";
 import silabas from "@/assets/chatgpt-image-silabas.png.asset.json";
 import palavras from "@/assets/pdf-palavras.jpg.asset.json";
-import historias from "@/assets/pdf-historias.jpg.asset.json";
+import historias from "@/assets/chatgpt-image-torre.png.asset.json";
 
 const pages = [
   { src: capa.url, alt: "Capa do Kit Exploradores da Leitura", caption: "Capa do kit" },
