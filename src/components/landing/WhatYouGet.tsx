@@ -36,10 +36,10 @@ const benefits = [
 
 export function WhatYouGet() {
   return (
-    <section className="bg-[#F5F7FA] py-16 sm:py-24">
+    <section className="bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <Reveal className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-[#123B7A] sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
             O Que Você Vai Receber
           </h2>
         </Reveal>
@@ -52,7 +52,7 @@ export function WhatYouGet() {
                   <div className={`grid size-10 shrink-0 place-items-center rounded-xl sm:size-12 ${item.bg}`}>
                     {item.icon}
                   </div>
-                  <span className="text-sm font-medium leading-tight text-[#123B7A] sm:text-base md:text-lg">
+                  <span className="text-sm font-medium leading-tight text-foreground/90 sm:text-base md:text-lg">
                     {item.text}
                   </span>
                 </li>
