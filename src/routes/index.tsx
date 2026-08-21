@@ -62,7 +62,6 @@ function Index() {
         
         <div className="space-y-0">
           <WhatYouGet />
-          <WorldsSection />
           <Achievement />
           <ForWho />
           <Gallery />
