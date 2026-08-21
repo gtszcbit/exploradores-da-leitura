@@ -243,3 +243,7 @@
 @utility reveal-in {
   animation: var(--animate-rise);
 }
+
+#lovable-badge {
+  display: none !important;
+}
