@@ -159,43 +159,43 @@ export const MISSIONS = [
 
 export const FAQS = [
   {
-    q: "O que é o Kit Exploradores da Leitura?",
-    a: "É um material digital em PDF com 100 missões de alfabetização, organizadas em 7 mundos, para trabalhar sons, letras, sílabas, palavras e frases de forma lúdica.",
+    q: "O material é físico ou digital?",
+    a: "É um material 100% digital em PDF. Você recebe o acesso imediatamente após a confirmação da compra e pode baixar no celular, computador ou tablet.",
   },
   {
-    q: "Para qual idade ele é indicado?",
-    a: "O kit foi pensado para crianças de 4 a 6 anos, em fase de alfabetização, com o acompanhamento de um adulto.",
+    q: "Para qual idade o kit é indicado?",
+    a: "O Kit Exploradores da Leitura foi desenvolvido especialmente para crianças de 4 a 6 anos, em fase de pré-alfabetização e alfabetização inicial.",
   },
   {
-    q: "O produto é físico?",
-    a: "Não. É um produto 100% digital, em PDF, que você mesmo pode imprimir em casa.",
+    q: "Como funciona a metodologia das 100 missões?",
+    a: "As atividades seguem uma sequência progressiva em 7 mundos, ensinando a criança desde os sons das palavras até a leitura de frases e pequenas histórias.",
   },
   {
-    q: "Como recebo o material?",
-    a: "O acesso ao arquivo digital é liberado após a confirmação do pagamento.",
+    q: "Preciso imprimir todas as páginas?",
+    a: "Não. Você pode imprimir apenas as atividades que desejar e reutilizar o arquivo sempre que precisar.",
   },
   {
-    q: "Posso imprimir as atividades?",
-    a: "Sim. As páginas foram feitas para impressão caseira e podem ser reimpressas sempre que a criança quiser repetir uma missão.",
+    q: "O kit serve para pais e professores?",
+    a: "Sim. O material foi criado para ser usado tanto em casa pelos pais quanto por professores e profissionais de reforço escolar.",
   },
   {
-    q: "Quantas missões existem?",
-    a: "São 100 missões, distribuídas entre os 7 mundos da jornada, terminando no Grande Desafio do Leitor.",
+    q: "O material possui atividades lúdicas?",
+    a: "Sim. O kit inclui jogos, rimas, sílabas, desafios, caça-palavras, leitura guiada e diversas atividades educativas que tornam o aprendizado mais divertido.",
   },
   {
-    q: "Quais habilidades são trabalhadas?",
-    a: "Consciência fonológica, consciência fonêmica, relação letra e som, sílabas e decodificação, leitura de palavras, frases e compreensão.",
+    q: "Como vou receber o acesso ao material?",
+    a: "Após a compra, você recebe um link para acessar e baixar o PDF imediatamente, sem esperar entrega.",
   },
   {
-    q: "Preciso acompanhar a criança?",
-    a: "Sim. As missões foram pensadas para serem feitas junto com um adulto, que lê os comandos e conduz a atividade.",
+    q: "Por quanto tempo terei acesso?",
+    a: "O acesso é vitalício. Você poderá baixar o material sempre que quiser.",
   },
   {
-    q: "O material substitui a escola?",
-    a: "Não. É um recurso complementar de apoio à alfabetização e não substitui a escola, professores ou acompanhamento profissional.",
+    q: "Posso imprimir quantas vezes quiser?",
+    a: "Sim. O arquivo é seu e pode ser impresso quantas vezes forem necessárias para uso pessoal ou em sala de aula.",
   },
   {
-    q: "Como funciona o certificado?",
-    a: "Ao concluir as 100 missões, a criança chega ao desafio final e recebe o certificado de Superleitor(a), que faz parte do próprio PDF.",
+    q: "Existe garantia?",
+    a: "Sim. A compra possui garantia de 7 dias. Se o material não atender às suas expectativas, você pode solicitar o reembolso dentro desse período.",
   },
 ] as const;

@@ -6,31 +6,34 @@ import {
 } from "@/components/ui/accordion";
 import { Reveal } from "./Reveal";
 import { FAQS } from "@/lib/kit-content";
+import { ChevronDown } from "lucide-react";
 
 export function Faq() {
   return (
-    <section id="faq" className="bg-card py-16 sm:py-20">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+    <section id="faq" className="bg-[#F5F7FA] py-16 sm:py-24">
+      <div className="mx-auto max-w-[700px] px-4 sm:px-6">
         <Reveal className="text-center">
-          <h2 className="font-display text-3xl font-bold text-primary sm:text-4xl">Dúvidas frequentes</h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Tudo o que você precisa saber antes de começar a jornada.
-          </p>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#123B7A] sm:text-4xl lg:text-5xl">
+            Perguntas Frequentes
+          </h2>
         </Reveal>
 
-        <Reveal className="mt-8">
-          <Accordion type="single" collapsible className="space-y-3">
+        <Reveal delay={100} className="mt-12 sm:mt-16">
+          <Accordion type="single" collapsible className="space-y-4">
             {FAQS.map((f, i) => (
               <AccordionItem
-                key={f.q}
+                key={i}
                 value={`item-${i}`}
-                className="rounded-3xl border border-border bg-background px-5 shadow-soft"
+                className="overflow-hidden rounded-[20px] border-none bg-white px-6 py-2 shadow-[0_2px_15px_-3px_rgba(18,59,122,0.07)] sm:rounded-[24px]"
               >
-                <AccordionTrigger className="text-left font-display text-base font-semibold text-foreground hover:no-underline">
-                  {f.q}
+                <AccordionTrigger className="flex items-center justify-between py-4 text-left font-display text-base font-bold text-[#123B7A] transition-all hover:no-underline sm:text-lg [&[data-state=open]>svg]:rotate-180">
+                  <span>{f.q}</span>
+                  <ChevronDown className="size-5 shrink-0 text-accent transition-transform duration-300" />
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  {f.a}
+                <AccordionContent className="pb-4 text-sm leading-relaxed text-[#123B7A]/80 sm:text-base">
+                  <div className="pt-2 border-t border-gray-50">
+                    {f.a}
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}
