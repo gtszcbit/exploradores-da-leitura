@@ -87,7 +87,6 @@ export function UpsellDialog({ open, onOpenChange, onDecline }: Props) {
           </button>
         </div>
       </DialogContent>
-      </DialogContent>
     </Dialog>
   );
 }
