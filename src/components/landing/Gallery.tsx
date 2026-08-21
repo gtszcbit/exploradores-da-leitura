@@ -5,7 +5,6 @@ import capa from "@/assets/kit_cover_v2.jpeg.asset.json";
 import sons from "@/assets/floresta-dos-sons.png.asset.json";
 import fonemas from "@/assets/chatgpt-image-fonemas.png.asset.json";
 import silabas from "@/assets/chatgpt-image-silabas.png.asset.json";
-import palavras from "@/assets/pdf-palavras.jpg.asset.json";
 import historias from "@/assets/chatgpt-image-torre.png.asset.json";
 
 const pages = [
@@ -13,7 +12,6 @@ const pages = [
   { src: sons.url, alt: "Página da Floresta dos Sons", caption: "Floresta dos Sons" },
   { src: fonemas.url, alt: "Página da Caverna dos Fonemas: Junte os Sons", caption: "Caverna dos Fonemas" },
   { src: silabas.url, alt: "Página do Vale das Sílabas", caption: "Vale das Sílabas" },
-  { src: palavras.url, alt: "Página da Vila das Palavras", caption: "Vila das Palavras" },
   { src: historias.url, alt: "Página da Torre dos Campeões: O Grande Detetive das Letras", caption: "Torre dos Campeões" },
 ];
 
