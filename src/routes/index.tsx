@@ -63,7 +63,7 @@ function Index() {
         <WhatYouGet />
         
         <Gallery />
-        <HowItWorks />
+        
         <ForWho />
         <Achievement />
         <Offer />
