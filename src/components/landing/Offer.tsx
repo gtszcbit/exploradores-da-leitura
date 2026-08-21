@@ -25,10 +25,8 @@ export function Offer() {
 
   const handleAcessoInicial = () => {
     trackEvent("clique_oferta_10", { price: 10 });
-    if (upsellSeen) {
-      goToCheckout(CHECKOUT.acessoInicial);
-      return;
-    }
+    setUpsellOpen(true);
+    return;
     setUpsellSeen(true);
     setUpsellOpen(true);
   };
