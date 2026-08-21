@@ -59,7 +59,7 @@ function Index() {
       <main>
         <Hero />
         <TrustBar />
-        <PainDesire />
+        
         <WhatYouGet />
         
         <Gallery />
