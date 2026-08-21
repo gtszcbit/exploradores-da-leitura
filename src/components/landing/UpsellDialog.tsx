@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Reveal } from "./Reveal";
 import { CHECKOUT, goToCheckout, trackEvent } from "@/lib/kit-content";
-import { Check, ShieldCheck, Zap, X } from "lucide-react";
+import { Check, ShieldCheck, Zap, X, ArrowRight } from "lucide-react";
 
 interface UpsellDialogProps {
   open: boolean;
