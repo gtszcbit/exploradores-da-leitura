@@ -118,22 +118,17 @@ export function NinoSection() {
 
 export function Achievement() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20">
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <span className="absolute top-10 left-[10%] text-xl animate-twinkle">⭐</span>
-        <span className="absolute top-24 right-[12%] text-lg animate-twinkle [animation-delay:1s]">🎉</span>
-        <span className="absolute bottom-12 left-[20%] text-lg animate-twinkle [animation-delay:1.8s]">✨</span>
-      </div>
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
+    <section className="relative overflow-hidden py-20 sm:py-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2">
         <Reveal>
-          <div className="rotate-[-1.5deg] rounded-4xl border-4 border-card bg-card p-3 shadow-lift">
+          <div className="rounded-[32px] border border-border bg-card p-4 shadow-card">
             <img
               src={certificado.url}
-              alt="Certificado de Superleitor(a) do Kit Exploradores da Leitura"
+              alt="Certificado do Kit"
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-full rounded-3xl"
+              className="w-full rounded-[24px]"
             />
           </div>
         </Reveal>
@@ -141,15 +136,14 @@ export function Achievement() {
           <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 font-display text-xs font-bold tracking-wide text-accent-foreground uppercase">
             🏆 A grande conquista
           </span>
-          <h2 className="mt-4 font-display text-3xl font-bold text-balance text-primary sm:text-4xl">
-            E toda grande aventura merece uma recompensa.
+          <h2 className="mt-6 font-display text-3xl font-bold text-balance text-primary sm:text-4xl">
+            Toda grande aventura merece uma recompensa.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Depois de completar as 100 missões, a criança chega ao desafio final e recebe um
-            certificado especial de Superleitor(a).
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            Ao completar as 100 missões, a criança recebe um certificado especial de Superleitor(a).
           </p>
-          <Button asChild variant="hero" size="xl" className="mt-8 w-full sm:w-auto">
-            <a href="#oferta">🚀 QUERO COMEÇAR A JORNADA</a>
+          <Button asChild variant="hero" size="xl" className="mt-10 w-full rounded-full sm:w-auto">
+            <a href="#oferta">QUERO COMEÇAR A JORNADA</a>
           </Button>
         </Reveal>
       </div>
