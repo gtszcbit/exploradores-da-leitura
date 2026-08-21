@@ -42,11 +42,11 @@ export function Hero() {
             </Button>
           </div>
 
-          <ul className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-2 lg:justify-start">
+          <ul className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start">
             {bullets.map((b) => (
-              <li key={b} className="flex items-center gap-2 text-sm font-semibold text-foreground/80">
-                <Check className="size-4 text-primary" aria-hidden />
-                {b}
+              <li key={b.text} className="flex items-center gap-2 text-sm font-semibold text-foreground/90">
+                <b.icon className="size-4 text-accent" aria-hidden />
+                {b.text}
               </li>
             ))}
           </ul>
